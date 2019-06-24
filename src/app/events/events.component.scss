@@ -1,0 +1,33 @@
+.eventyr:hover{
+    background-color: transparent;
+    color: blue;
+    border-color: blue;
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+// .expansion-panel{
+//     background-color: black;
+//     font-size: 22px;
+//     color: white;
+// }
+/*--------Mobile-------*/
+@media only screen and (max-width: 599px) {
+   .eventyr {
+        margin: 5px 0px 10px 5px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+      .eventyr{
+        font-size: 19px;
+    }
+}
+
+/*----------Laptop-------------*/
+@media only screen and (min-width: 1200px) {
+     .eventyr{
+        font-size: 22px;
+    }
+   
+}

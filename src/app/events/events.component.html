@@ -1,4 +1,40 @@
-<div class="Container">
-<button *ngFor="let eyear of allevents">{{eyear.year}}
-</button>
-</div>
+<img src="assets/shared/event.jpg" width="100%">
+    <div class="container-fluid" style="margin-top:4%">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-6 col-sm-3 col-lg-2" *ngFor="let eyear of allevents">
+                    <button role="button" class="btn btn-dark eventyr"  
+                    (click)="onSelectYear(eyear)"
+                    >Events' {{eyear.year}}
+                           </button>
+                </div>
+            </div>
+            <h6 class="text-muted offset-lg-2 offset-xl-2"><sup>*</sup>Click on any of the above links 
+                to show events.</h6>
+        </div>
+
+        <div class="container-fluid" fxLayout="column" fxLayoutGap="20px" style="margin-bottom:3%">
+                <div fxFlex>
+                  <div>
+                    <h3>{{SelectedYear.year}}</h3>
+                    <hr>
+                  </div>
+                </div>
+                <div  *ngIf="ShowEvents" fxFlex>
+                <div *ngFor = "let emonth of SelectedYear.Events ;let i = index">
+                        <div><h3 matLine>{{emonth.Month}}</h3></div>
+                        
+                <mat-grid-list cols="2" rowHeight="200px">
+                  <mat-grid-tile *ngFor="let event of emonth.Events_Info">
+                    <img  src="{{event.Event_pics[0]}}" alt={{event.Event_pics[0]}}>
+                    <mat-grid-tile-footer id="vheadings">
+                      <span> {{event.Event_Name| uppercase}}</span>
+                      <span style="flex: 1 1 auto"></span>
+                      <button mat-button>Show Info</button>
+                    </mat-grid-tile-footer>
+                  </mat-grid-tile>
+                </mat-grid-list>
+              </div>
+            </div>
+        </div>
+<br><br>

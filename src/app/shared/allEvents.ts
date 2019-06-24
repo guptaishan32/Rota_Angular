@@ -1,5 +1,10 @@
 import { Event  } from './events';
 export class AllEvents{
     year: String;
-    Events_Info: Event[];
+    Events: Month[];
     }
+
+class Month{
+    Month:String;
+    Events_Info : Event[];
+} 

@@ -7,7 +7,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { MatSelectModule } from '@angular/material/select';
+import {MatTabsModule} from '@angular/material/tabs';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatDatepickerModule,} from '@angular/material/datepicker';
@@ -31,6 +33,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FeaturedEventsComponent } from './featured-events/featured-events.component';
 import { EventsComponent } from './events/events.component';
 import { from } from 'rxjs';
+import { EventsYearWiseComponent } from './events-year-wise/events-year-wise.component';
 
 @NgModule({
   declarations: [
@@ -41,13 +44,14 @@ import { from } from 'rxjs';
     HeaderComponent,
     FooterComponent,
     FeaturedEventsComponent,
-    EventsComponent
+    EventsComponent,
+    EventsYearWiseComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,YoutubePlayerModule,
     MatToolbarModule,MatCardModule,MatButtonModule,MatExpansionModule, MatSidenavModule, MatIconModule, 
     MatListModule,MatSelectModule,FlexLayoutModule,LayoutModule,
-    NgbModule,AppRoutingModule
+    NgbModule,AppRoutingModule,MatTabsModule,MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
