@@ -3,10 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'youtubeVideos',
   template:`
+  <div class="infoline"><span> {{title}} </span></div>
     <div class="container-fluid"
     fxLayout="row"
     fxLayout.xs="column"
     fxLayoutGap="10px">
+   
   <div *ngFor="let video of YouTubeVideos" fxFlex>
     <div>
         <p id="vheadings">{{video.title}} <small>- {{video.year}} {{video.subtitle }}</small></p>
@@ -27,7 +29,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YoutubeVideoComponent implements OnInit {
 
-  title = "Videos";
+  title = "Projects";
   
   constructor() { }
 
@@ -66,7 +68,7 @@ export class YoutubeVideoComponent implements OnInit {
  
   savePlayer(player) {
     this.player = player;
-    console.log('Video Url', this.player.getVideoUrl);
+    // console.log('Video Url', this.player.getVideoUrl);
   }
   onStateChange(event) {
     console.log('player state', event.data);

@@ -3,9 +3,44 @@
 body {
     margin: 0px;
     padding: 0px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+div{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #vheadings {
     font-size: 1.3vmax;
     font-weight: bold;
+}
+
+// --------------Infoline common area------------
+.infoline {
+    line-height: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size:2vmax;
+    margin: 2.5vmax 0px 2.5vmax 0px;
+}
+
+.infoline span {
+    display: inline-block;
+    position: relative;
+}
+
+.infoline span:before,
+.infoline span:after {
+    content: "";
+    position: absolute;
+    border: 1px solid black;
+    top: 0;
+    width: 30vw;
+}
+.infoline span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.infoline span:after {
+    left: 100%;
+    margin-left: 15px;
 }

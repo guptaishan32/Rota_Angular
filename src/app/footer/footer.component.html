@@ -1,0 +1,66 @@
+<div class="footer">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row class="footer-navbar" fxLayout.xs="column" fxLayoutGap.gt-xs="20px">
+            <div fxFlex.gt-sm="30" fxHide.lt-md fxFlex.gt-md="40">
+                <!--Desktop Version Map-->
+                <div matLine class="footer_headings">Reach US</div>
+                <div class="embed-responsive embed-responsive-4by3 d-none d-lg-block d-xl-none">
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3419.3480576888915!2d77.06797031509305!3d31.016550981539247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39057db24364e085%3A0x4f4fefd65caa0317!2sJaypee+University+of+Information+Technology!5e0!3m2!1sen!2sin!4v1541239986044" width="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="embed-responsive embed-responsive-21by9 d-md-block d-none d-lg-none d-xl-block">
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3419.3480576888915!2d77.06797031509305!3d31.016550981539247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39057db24364e085%3A0x4f4fefd65caa0317!2sJaypee+University+of+Information+Technology!5e0!3m2!1sen!2sin!4v1541239986044" width="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!--Contact Us-->
+            <div  fxFlex.md="30" fxFlex.sm="40" fxFlex.gt-md="20">
+                <div matLine class="footer_headings">Contact US</div>
+                <div matLine fxLayout="row" fxLayoutGap="10px" class="mt-1">
+                    <mat-icon>home</mat-icon>                    
+                        Jaypee University of Information Technology, <br> Waknaghat Teh Kandaghat,
+                                 Distt. Solan<br> PIN-173 234 (H.P.), India
+                </div>
+                <div matLine fxLayout="row" fxLayoutGap="30px">
+                        <mat-icon>phone</mat-icon>&emsp;&emsp; {{phoneNo}}      
+                </div>
+                <div matLine fxLayout="row" fxLayoutGap="10px">
+                            <mat-icon>email</mat-icon>&emsp;racwaknaghat3080@gmail.com
+                </div>    
+            </div>
+            <!--Stay In touch-->
+            <div fxFlex.gt-sm="30" fxFlex.sm="25">
+                    <div matLine class="footer_headings">Stay in Touch</div>
+                    <div id="lab_social_icon_footer" style="color:white" class="mt-4">
+                        <div matLine style="text-align:center">
+                            <a href="https://www.facebook.com/RotaractClubOfWaknaghat/" target="_blank"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                            <a href="https://twitter.com/Rotaractwakna" target="_blank"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                            <a href="https://www.youtube.com/channel/UCkZkmKikVesPPftZWhJrCtA" target="_blank"><i id="social-yt" class="fa fa-youtube-play fa-3x social"></i></a>
+                            <a href="https://www.instagram.com/rotaractwakna3080/" target="_blank"><i id="social-inst" class="fa fa-instagram fa-3x social"></i></a>
+                        </div>
+                    </div>
+                    <div matLine id="logofooter" style="text-align:center">
+                        <a routerLink="/home">
+                            <img src="assets/shared/logo.gif" height="50px" width="193px">
+                        </a>
+                    </div>  
+                    <br>          
+                </div>
+            <div fxFlex.gt-sm="20" fxFlex.sm="10">
+                <div matLine id="footer_headings">
+                    "Giving is not just making a donation.<br>
+                         Its about making a difference"
+                </div>             
+                <a routerLink="/donate"> <button type="button" class="btn btn-outline-danger btn-sm" id="footerbtn">Donate</button></a>
+                <br>
+                <div id="footer_headings" class="mt-4">
+                    Wanna Join?
+                </div>
+                <span>
+                    <a routerLink="/join"><button type="button" class="btn btn-outline-danger btn-sm" id="footerbtn">Join Us</button></a></span>
+            </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row fxLayout="column" style="height:90px">
+                    <div matLine style="text-align: center; margin: 0 auto">2018-19&copy;All Rights Reserved</div>
+                    <div matLine style="text-align:right; margin: 0 auto"><small>Website Designed and maintained by Ishan Gupta</small></div>
+     </mat-toolbar-row>
+    </mat-toolbar>
+      </div>
