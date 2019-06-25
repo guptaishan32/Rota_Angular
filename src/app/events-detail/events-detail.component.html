@@ -1,0 +1,82 @@
+<!-- <div class="container" *ngFor="let listyr of event">
+  <div *ngIf="listyr.year === Year">
+      <div class="conatiner-fluid"  fxLayout="row"
+      fxLayout.sm="column"
+      fxLayout.xs="column"
+      fxLayoutAlign.gt-md="space-around center"
+      fxLayoutGap="10px" 
+      fxLayoutGap.xs="0" 
+      *ngFor="let listmonth of listyr.Events">
+      <div class="col-12 col-md-6" *ngIf="listmonth.Month === Month" >
+          <div *ngFor="let event of listmonth.Events_Info">
+          <mat-card *ngIf="event.Event_id === id ">
+              
+            <img class="img-fluid" src={{event.Event_pics[0]}}>
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6" *ngIf="listmonth.Month === Month">
+          <div *ngFor="let event of listmonth.Events_Info">
+
+          <mat-card *ngIf="event.Event_id === id ">
+              <mat-card-header>
+                  <img mat-card-avatar src="{{event.Event_pics[0]}}">
+                  <mat-card-title><h5>{{event.Event_Name}}</h5></mat-card-title>
+                  <mat-card-subtitle><h6>{{event.Event_date | date}}</h6></mat-card-subtitle>
+                </mat-card-header>
+                <hr>
+                <div><h5>{{event.Event_info}}</h5></div>
+                <mat-card-actions>
+                    <button mat-button><h5>Show Gallery</h5></button>
+                    <button mat-button><h5>Back</h5></button>
+                  </mat-card-actions>
+          </mat-card>
+      </div> 
+    </div>
+  </div>  
+</div>
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-6">
+        <mat-card *ngIf="event">
+            <mat-card-header>
+                <img mat-card-avatar src="{{event.Event_pics[0]}}">
+                <mat-card-title><h5>{{event.Event_Name}}</h5></mat-card-title>
+                <mat-card-subtitle><h6>{{event.Event_date | date}}</h6></mat-card-subtitle>
+              </mat-card-header>
+            <img mat-card-image src={{event.Event_pics[0]}}>
+            <mat-card-actions>
+                <button mat-button><h5>Back</h5></button>
+              </mat-card-actions>
+          </mat-card>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div *ngIf="event">
+        <div class="event-div">
+          <h4 matLine><b><u>Event Info</u></b></h4>
+          <h5 matLine>{{event.Event_info}}</h5></div>
+          <button type="button" class="btn btn-link"><h5>Show Gallery</h5></button>  
+      </div>
+    </div>
+    </div>
+    <br>
+    <div *ngIf="event">
+      <div class="row" >
+        <div id="vheadings">Rtr's Experience</div>
+      </div>
+      <br>
+      <div class="row">
+        <mat-card class="col-12 col-md-6 col-lg-4" *ngFor="let exp of event.Exp">
+          <h5 matLine>{{exp.comment}}</h5>
+          <h6 matLine>-- {{exp.Author}} {{exp.Date | date}}</h6>
+        </mat-card>
+      </div>
+    </div>
+    <div>
+      <div class="row">
+        <gallery></gallery>
+      </div>
+    </div>
+</div>

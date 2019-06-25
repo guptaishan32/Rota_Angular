@@ -32,8 +32,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FeaturedEventsComponent } from './featured-events/featured-events.component';
 import { EventsComponent } from './events/events.component';
-import { from } from 'rxjs';
-import { EventsYearWiseComponent } from './events-year-wise/events-year-wise.component';
+import { EventsDetailComponent } from './events-detail/events-detail.component';
+import { TeamComponent } from './team/team.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import { EventsYearWiseComponent } from './events-year-wise/events-year-wise.com
     FooterComponent,
     FeaturedEventsComponent,
     EventsComponent,
-    EventsYearWiseComponent
+    EventsDetailComponent,
+    TeamComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,YoutubePlayerModule,

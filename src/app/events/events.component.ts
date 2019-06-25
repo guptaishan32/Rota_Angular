@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AllEvents } from '../shared/allEvents';
 import { Events_data } from '../shared/Events_data';
+import { Event } from '../shared/events';
  
 @Component({
   selector: 'app-events',
@@ -14,9 +15,9 @@ export class EventsComponent implements OnInit {
   ngOnInit() {
   }
   SelectedYear: AllEvents;
-  SelectedMonth: AllEvents;
+  SelectedEvent: Event;
   ShowEvents = false;
-  ShowMonth = false;
+  isselected = false;
 
   allevents: AllEvents[] = Events_data;
 
@@ -24,12 +25,10 @@ export class EventsComponent implements OnInit {
     this.SelectedYear = year;
     this.ShowEvents = true;
   }
-  SelectMonth(month: AllEvents){
-    this.SelectedMonth = month;
-    this.ShowMonth = true;
-  }
 
-  // trackElement(index: number, element:any){
-  //   return element ? element.Event_Name : null;
-  // }
+  onSelectEvent(event: Event){
+    this.SelectedEvent = event;
+  }
+  
+
 }

@@ -6,4 +6,11 @@ export class Event{
     Event_date: String;
     Event_info: String;
     Event_pics: String[];
+    Exp: exp[];
+}
+
+class exp{
+    Author: String;
+    Date: String;
+    comment: String;
 }
