@@ -10,7 +10,8 @@ import { MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from 
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatSelectModule } from '@angular/material/select';
 import {MatTabsModule} from '@angular/material/tabs';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatDatepickerModule,} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -24,6 +25,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { NgxImageGalleryModule } from 'ngx-image-gallery';
 import { YoutubePlayerModule } from 'ngx-youtube-player';
 
+//import { EventsService } from './services/events.service';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { YoutubeVideoComponent } from './youtube-video/youtube-video.component';
@@ -35,6 +38,8 @@ import { EventsComponent } from './events/events.component';
 import { EventsDetailComponent } from './events-detail/events-detail.component';
 import { TeamComponent } from './team/team.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { MyfilterPipe } from './pipes/myfilter.pipe';
+import { TeamService } from './services/team.service';
 
 @NgModule({
   declarations: [
@@ -49,14 +54,15 @@ import { GalleryComponent } from './gallery/gallery.component';
     EventsDetailComponent,
     TeamComponent,
     GalleryComponent,
+    MyfilterPipe,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,YoutubePlayerModule,NgxImageGalleryModule,
-    MatToolbarModule,MatCardModule,MatButtonModule,MatExpansionModule, MatSidenavModule, MatIconModule, 
-    MatListModule,MatSelectModule,FlexLayoutModule,LayoutModule,
-    NgbModule,AppRoutingModule,MatTabsModule,MatGridListModule
+    MatToolbarModule,MatCardModule,MatButtonModule,MatExpansionModule, MatSidenavModule, MatIconModule, MatSlideToggleModule,
+    MatListModule,MatSelectModule,FlexLayoutModule,LayoutModule,FormsModule,
+    NgbModule,AppRoutingModule,MatTabsModule,MatGridListModule,MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [TeamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

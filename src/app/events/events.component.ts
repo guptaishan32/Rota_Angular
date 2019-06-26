@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AllEvents } from '../shared/allEvents';
-import { Events_data } from '../shared/Events_data';
+import { Years,  Events_Info } from '../shared/Events_Info';
 import { Event } from '../shared/events';
+import { AllEvents } from '../shared/allEvents';
+
+//import { EventsService } from '../services/events.service';
  
 @Component({
   selector: 'app-events',
@@ -10,18 +12,21 @@ import { Event } from '../shared/events';
 })
 export class EventsComponent implements OnInit {
 
+  Year = Years;
+  Events:AllEvents[]  = Events_Info;  
+
+  checked = false;
+  SelectedYear: String;
+  SelectedEvent: Event;
+  ShowEvents = false;
+  isselected = false;
   constructor() { }
 
   ngOnInit() {
   }
-  SelectedYear: AllEvents;
-  SelectedEvent: Event;
-  ShowEvents = false;
-  isselected = false;
-
-  allevents: AllEvents[] = Events_data;
-
-  onSelectYear(year: AllEvents){
+  
+  
+  onSelectYear(year: String){
     this.SelectedYear = year;
     this.ShowEvents = true;
   }

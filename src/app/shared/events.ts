@@ -1,5 +1,7 @@
 export class Event{
     SNo: String;
+    Year: String;
+    Month:String
     Event_id: String;
     IndexPageFeatured: boolean;
     Event_Name: String;

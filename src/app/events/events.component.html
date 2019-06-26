@@ -2,29 +2,56 @@
     <div class="container-fluid" style="margin-top:4%">
             <div class="row">
                 <div class="col-lg-1 col-xl-2"></div>
-                <div class="col-6 col-sm-3 col-lg-auto col-xl-2" *ngFor="let eyear of allevents">
-                    <button role="button" class="btn btn-dark eventyr"  
+                <div class="col-6 col-sm-3 col-lg-auto col-xl-2" *ngFor="let eyear of Events">
+                    <button role="button" class="btn btn-dark eventyr" 
                     (click)="onSelectYear(eyear)"
-                    [class.selected]="eyear.year === SelectedYear">Events' {{eyear.year}}
+                    >Events' {{eyear.Year}}
                            </button>
                 </div>
             </div>
-            <h5 [hidden]="ShowEvents" class="text-muted offset-lg-1 offset-xl-2"><sup>*</sup>Click on any of the above links 
-                to show events.</h5>
+            <h5 [hidden]="ShowEvents" class="text-muted offset-lg-1 offset-xl-2"><sup>*</sup>Click on any of the above links to show events.</h5>
         </div>
         <br>
-        <div class="container-fluid" fxLayout="column" fxLayoutGap="20px" style="margin-bottom:3%">
+        <div class="container" fxLayout="column" fxLayoutGap="20px" style="margin-bottom:3%">
             <div  *ngIf="ShowEvents" fxFlex>
-                <div>
-                    <h3>{{SelectedYear.year}}</h3>
+                    <h3>{{SelectedYear.Year}}</h3>
                   <hr>
+                <!-- <div class="col-12" id="vheadings">
+                  <mat-slide-toggle [(ngModel)]="checked">Filter Events By Month</mat-slide-toggle>
                 </div>
+                <br>
+                <div>
+                  <div class="form-group" *ngIf="checked">
+                      
+                      <input #form="ngModel" type="text" [(ngModel)]="filtertext" class="form-control" placeholder="Enter Month">
+                  </div>
+                </div> -->
+                <br>
+                    <mat-grid-list cols="2" rowHeight="200px">
+                        <mat-grid-tile *ngFor="let event of SelectedYear['Events'] | myfilter: filtertext;" (click)="onSelectEvent(event)">
+                          <img  src="{{event.Event_pics[0]}}" alt={{event.Event_pics[0]}}>
+                          <mat-grid-tile-footer id="vheadings">
+                            <span> {{event.Event_Name| uppercase}}</span>
+                            <span style="flex: 1 1 auto"></span>
+                            <button mat-button (click)="onSelectEvent(event)" >Show Info</button>
+                            </mat-grid-tile-footer>
+                          </mat-grid-tile>
+                        </mat-grid-list>
+                </div>
+                <div class="col-12" *ngIf="(Events | myfilter: filtertext)?.length==0">
+                  <h4>Valid Month Please</h4>
+                </div>             
             </div>
-            <div  *ngIf="ShowEvents" fxFlex>
-              <div *ngFor = "let emonth of SelectedYear.Events ;let i = index">
-                  <div><h3 matLine>{{emonth.Month}}</h3></div>                      
+         
+     
+        <!-- <events-detail [event]="SelectedEvent"></events-detail> -->
+<br><br>
+
+<!-- <div  *ngIf="ShowEvents" fxFlex>
+              <div *ngFor = "let emonth of Month ;let i = index">
+                  <div><h3 matLine>{{emonth}}</h3></div>                      
               <mat-grid-list cols="2" rowHeight="200px">
-                <mat-grid-tile *ngFor="let event of emonth.Events_Info" (click)="onSelectEvent(event)">
+                <mat-grid-tile *ngFor="let event of Events" (click)="onSelectEvent(event)">
                   <img  src="{{event.Event_pics[0]}}" alt={{event.Event_pics[0]}}>
                   <mat-grid-tile-footer id="vheadings">
                     <span> {{event.Event_Name| uppercase}}</span>
@@ -34,8 +61,4 @@
                   </mat-grid-tile>
                 </mat-grid-list>
               </div>
-            </div>
-        </div>
-
-        <events-detail [event]="SelectedEvent"></events-detail>
-<br><br>
+            </div> -->

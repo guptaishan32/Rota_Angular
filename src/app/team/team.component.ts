@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamData } from '../shared/TeamData';
 import { Team } from '../shared/team';
+import { TeamService } from '../services/team.service';
 
 @Component({
   selector: 'app-team',
@@ -9,11 +10,13 @@ import { Team } from '../shared/team';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
+  constructor(private teamService: TeamService) { }
 
-  team :Team[] = TeamData;
+  team :Team[];
 
   ngOnInit() {
+    this.teamService.getTeam().subscribe(Team => this.team = Team);
+      
   }
 
   CoordinatorName = "Your Name";

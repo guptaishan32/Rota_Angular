@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Events_data } from '../shared/Events_data';
+
 import { AllEvents } from '../shared/allEvents';
 @Component({
   selector: 'featuredEvents',
@@ -13,7 +13,7 @@ export class FeaturedEventsComponent implements OnInit {
   ngOnInit() {
   }
 
-  events:AllEvents[] = Events_data;
+ 
    
 
 }

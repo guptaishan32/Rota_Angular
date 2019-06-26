@@ -1,5 +1,5 @@
 <img src="assets/shared/team.jpg" width="100%">
-<div class="container">
+<div class="container" *ngIf="team">
     <div class="infoline"><span>FACULTY COORDINATOR</span></div>
 
     <div class="row">
@@ -127,5 +127,10 @@
               </div>
           </div>
     </div>
+  </div>
+  <div class="container">
+        <div [hidden]="team">
+                <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+              </div>
   </div>
   <br>
