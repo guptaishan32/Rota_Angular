@@ -210,7 +210,19 @@ Apache License
 Apache-2.0
 Apache-2.0
 
+@firebase/firestore@1.4.1
+Apache-2.0
+Apache-2.0
+
+@angular/fire@5.2.1
+MIT
+MIT
+
 @angular/core@6.1.10
+MIT
+MIT
+
+angularfire2@5.2.1
 MIT
 MIT
 
@@ -360,6 +372,10 @@ Apache-2.0
 ngx-image-gallery@1.3.1
 MIT
 MIT
+
+@firebase/webchannel-wrapper@0.2.21
+Apache-2.0
+Apache-2.0
 
 hammerjs@2.0.8
 MIT
