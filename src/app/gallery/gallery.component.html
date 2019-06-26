@@ -1,3 +1,12 @@
-<p>
-  gallery works!
-</p>
+<div class="container-fluid">
+  <h4>Gallery</h4>
+</div>
+<ngx-image-gallery 
+[images]="images" 
+[conf]="conf"
+(onOpen)="galleryOpened($event)"
+(onClose)="galleryClosed()"
+(onImageClicked)="galleryImageClicked($event)"
+(onImageChange)="galleryImageChanged($event)"
+(onDelete)="deleteImage($event)"
+></ngx-image-gallery>

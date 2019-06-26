@@ -1,3 +1,131 @@
-<p>
-  team works!
-</p>
+<img src="assets/shared/team.jpg" width="100%">
+<div class="container">
+    <div class="infoline"><span>FACULTY COORDINATOR</span></div>
+
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+            <table class="table">
+                <img src="{{CoordinatorPic}}" alt="Faculty Coordinator" width="300px" height="300px">
+            </table>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+                <div id="ccontent">Our Faculty Coordinator</div>
+                <br>
+                <div id="rotname">{{CoordinatorName}}</div>
+                <div id="rotdes">{{CoordinatorDesignation}}</div>
+                <br>
+                <div id="rotemail">Email: {{CoordinatorEmail}}</div>
+                <br>
+                <span style="margin:20px 20px 20px 0px"><a href="{{CoordinatorFb}}" target="_blank">
+                    <div class="hvr-grow-shadow stats iconcontainer">
+                        <i class="fa fa-facebook fa-2x "></i>
+                    </div>
+                </a></span>&emsp;
+                <span style="margin:20px" >
+                <a target="_blank">
+                    <div class="hvr-grow-shadow stats  iconcontainer ">
+                        <i class="fa fa-instagram fa-2x "></i>
+                    </div>
+                </a></span>&emsp;
+                <span style="margin:20px">
+                <a target="_blank">
+                    <div class="hvr-grow-shadow stats iconcontainer">
+                        <i class="fa fa-linkedin fa-2x "></i>
+                    </div>
+                </a></span>
+        </div>
+    </div>
+    <br>
+    <div class="infoline"><span>EX PRESIDENT</span></div>
+
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+            <table class="table">
+                <img src="{{ExPresidentPic}}" alt="Faculty Coordinator" width="300px" height="300px">
+            </table>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+                <div id="vheadings">Our ExPresident</div>
+                <br>
+                <div id="rotname">{{ExPresidentName}}</div>
+                <div id="rotdes">{{ExPresidentDesignation}}</div>
+                <br>
+                <div id="rotemail">Email: {{ExPresidentEmail}}</div>
+                <br>
+                <span style="margin:20px 20px 20px 0px">
+                <a href="{{ExPresidentFb}}" target="_blank">
+                    <div class="hvr-grow-shadow stats iconcontainer">
+                        <i class="fa fa-facebook fa-2x "></i>
+                    </div>
+                  </a></span>&emsp;
+                  <span style="margin:20px">
+                <a target="_blank">
+                    <div class="hvr-grow-shadow stats  iconcontainer ">
+                        <i class="fa fa-instagram fa-2x "></i>
+                    </div>
+                  </a></span>&emsp;
+                  <span style="margin:20px">
+                <a target="_blank">
+                    <div class="hvr-grow-shadow stats iconcontainer">
+                        <i class="fa fa-linkedin fa-2x "></i>
+                    </div>
+                </a></span>
+        </div>
+    </div>
+    <br>
+    <div class="infoline"><span>BOARD OF DIRECTORS</span></div>
+
+  <div class="row">
+    <div class="cube-portfolio container margin-bottom-60">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4" *ngFor="let record of team">
+              <div class="cbp-item">
+                  <div class="card-container">
+                      <div class="card">
+                          <div class="front">
+                              <div class="cover"><img src="{{record.Pic}}" alt="{{record.Designation}}"></div>
+                                  <div class="content">
+                                      <div class="main">
+                                          <div class="name" id="rotname">Rtr. {{record.Name}}</div>
+                                              <p class="profession" id="rotdes">{{record.Designation}}</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- end front panel -->
+                                  <div class="back">
+                                    <div class="content">
+                                        <div class="main cardback">      
+                                                  <div class="name" id="message">
+                                                      {{record.Message}}
+                                                  </div>  
+                                          </div>
+                                          <p id="rotemail" style="margin-top:5px">Email: {{record.Email}}</p>
+                                          <div class="stats-container ">
+                                              <a href="{{record.Fb}}" target="_blank">
+                                                  <div class="hvr-grow-shadow stats iconcontainer">
+                                                      <i class="fa fa-facebook fa-2x "></i>
+                                                  </div>
+                                              </a>
+                                              <a href="{{record.Insta}}" target="_blank">
+                                                  <div class="hvr-grow-shadow stats  iconcontainer ">
+                                                      <i class="fa fa-instagram fa-2x "></i>
+                                                  </div>
+                                              </a>
+                                              <a>
+                                                  <div class="hvr-grow-shadow stats iconcontainer">
+                                                      <i class="fa fa-linkedin fa-2x "></i>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- end back panel -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+  <br>

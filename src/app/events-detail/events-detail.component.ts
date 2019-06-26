@@ -13,11 +13,14 @@ export class EventsDetailComponent implements OnInit {
   // Year= '2018-19'
   // Month= 'August'
   // id = 'TPD18_19_1';
-
+  SelectedEvent: Event;
   @Input()
   event: Event;
 
-  
+  ShowGallery(pic: Event){
+    this.SelectedEvent = pic;
+
+  }
          
   constructor() { }
 

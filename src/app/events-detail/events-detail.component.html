@@ -57,7 +57,7 @@
         <div class="event-div">
           <h4 matLine><b><u>Event Info</u></b></h4>
           <h5 matLine>{{event.Event_info}}</h5></div>
-          <button type="button" class="btn btn-link"><h5>Show Gallery</h5></button>  
+          <button type="button" class="btn btn-link" (click)="ShowGallery(event)"><h5>Show Gallery</h5></button>  
       </div>
     </div>
     </div>
@@ -74,9 +74,7 @@
         </mat-card>
       </div>
     </div>
-    <div>
-      <div class="row">
-        <gallery></gallery>
-      </div>
-    </div>
+</div>
+<div>
+    <gallery></gallery>
 </div>

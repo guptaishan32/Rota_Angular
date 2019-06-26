@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./custom-theme.scss";
+.mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
+    transform: none !important;
+}
 body {
     margin: 0px;
     padding: 0px;
@@ -7,6 +10,12 @@ body {
 div{
     font-family: 'Times New Roman', Times, serif;
 }
+
+#ccontent {
+    font-size: 1.3vmax;
+    text-align: justify;
+}
+
 #vheadings {
     font-size: 1.3vmax;
     font-weight: bold;
@@ -19,7 +28,7 @@ div{
     text-transform: uppercase;
     font-weight: 400;
     font-size:2vmax;
-    margin: 2.5vmax 0px 2.5vmax 0px;
+    margin: 2.4vmax 0px 2.4vmax 0px;
 }
 
 .infoline span {
@@ -33,7 +42,7 @@ div{
     position: absolute;
     border: 1px solid black;
     top: 0;
-    width: 30vw;
+    width: 24vw;
 }
 .infoline span:before {
     right: 100%;

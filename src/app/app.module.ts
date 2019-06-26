@@ -21,7 +21,7 @@ import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { NgxImageGalleryModule } from 'ngx-image-gallery';
 import { YoutubePlayerModule } from 'ngx-youtube-player';
 
 import { AppComponent } from './app.component';
@@ -51,7 +51,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     GalleryComponent,
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule,YoutubePlayerModule,
+    BrowserModule, BrowserAnimationsModule,YoutubePlayerModule,NgxImageGalleryModule,
     MatToolbarModule,MatCardModule,MatButtonModule,MatExpansionModule, MatSidenavModule, MatIconModule, 
     MatListModule,MatSelectModule,FlexLayoutModule,LayoutModule,
     NgbModule,AppRoutingModule,MatTabsModule,MatGridListModule
